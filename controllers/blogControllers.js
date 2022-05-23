@@ -72,6 +72,7 @@ function savePost(req, res) {
 
 function deletePost(req, res) {
   const id = req.params.id;
+
   postModal.findOneAndDelete(
     {
       _id: id,
@@ -84,6 +85,14 @@ function deletePost(req, res) {
     }
   );
 }
+
+function search(req, res) {
+  const { search } = req.body;
+  postModal
+    .find({ title: { $regex: search } })
+    .then((result) => res.render("home", { posts: result }))
+    .catch((err) => res.redirect("/"));
+}
 module.exports = {
   home,
   login,
@@ -95,4 +104,5 @@ module.exports = {
   login_post,
   register_post,
   logout,
+  search,
 };
