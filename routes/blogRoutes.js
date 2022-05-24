@@ -23,4 +23,5 @@ blogRoutes.get("/writePost", blogController.writePost);
 blogRoutes.post("/savePost", blogController.savePost);
 blogRoutes.get("/deletePost/:id", blogController.deletePost);
 blogRoutes.post("/search", blogController.search);
+blogRoutes.post("/updatePost/:id", blogController.updatePost);
 module.exports = blogRoutes;
