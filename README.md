@@ -15,5 +15,5 @@ To run this project: <br />
    <br /> 
     <br /> 
 
-if you fece any problem in running this project, Feel free to contact
+if you face any problem in running this project, Feel free to contact
 
